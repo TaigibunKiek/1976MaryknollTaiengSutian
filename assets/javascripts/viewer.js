@@ -1,11 +1,11 @@
 (function () {
   // TODO edit
-  const baseUrl = '/scannedImgViewer';
+  const baseUrl = '/1976MaryknollTaiengSutian';
   const dataFolderPath = '/chuliau';
-  const dataNamePrefix = '/TJTST1_';
-  const dataNameNumberCount = 3;
+  const dataNamePrefix = '/1976MaryknollTaiengSutian_Page_';
+  const dataNameNumberCount = 4;
   const dataNameSuffix = '.jpg';
-  const lastPageNumber = 12;
+  const lastPageNumber = 1093;
 
   let imgSources = [];
   const imgSourcesMin = 1;
