@@ -1,0 +1,24 @@
+---
+layout: null
+permalink: /chuliau/images.json
+---
+{%- if site.github -%}
+{%- assign baseUrl = "/" | append: site.github.repository_name -%}
+{%- else -%}
+{%- assign baseUrl = site.baseurl -%}
+{%- endif -%}
+{
+"baseUrl": "{{ baseUrl }}",
+"folder": "/chuliau",
+"images": [
+{%- assign first = true -%}
+{%- for file in site.static_files -%}
+{%- assign ext = file.extname | downcase -%}
+{%- if file.path contains '/chuliau/' and ext == '.jpg' -%}
+{%- unless first -%},{%- endunless -%}
+"{{ file.name }}"
+{%- assign first = false -%}
+{%- endif -%}
+{%- endfor -%}
+]
+}
