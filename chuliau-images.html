@@ -1,0 +1,20 @@
+---
+layout: null
+permalink: /chuliau/images.json
+---
+{
+  "baseUrl": "{{ site.baseurl }}",
+  "folder": "/chuliau",
+  "images": [
+{% assign first = true %}
+{% for file in site.static_files %}
+{% if file.path contains '/chuliau/' %}
+{% if file.extname == '.jpg' %}
+{% if first == false %},{% endif %}
+    "{{ file.name }}"
+{% assign first = false %}
+{% endif %}
+{% endif %}
+{% endfor %}
+  ]
+}
